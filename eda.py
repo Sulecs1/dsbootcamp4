@@ -81,7 +81,35 @@ def num_summary(dataframe, numerical_col, plot=False):
 # TARGET
 #############################################
 
+
 def target_summary_with_cat(dataframe, target, categorical_col):
+
+    """
+    target_summary_with_cat :finds the mean of target values categorical variables
+
+    :dataframe: pandas.core.frame.DataFrame ,dataset
+    :target: independent variable
+    :categorical_col: string
+        categorical columns
+    
+
+    Example
+    ----------
+    from sklearn.svm import SVC
+    from sklearn.datasets import load_iris
+    from sklearn.cross_validation import train_test_split
+
+    dataset = load_iris()
+
+    X = dataset.data
+    y = dataset.target
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33)
+
+    model = SVC()
+    model.fit(X_train, y_train)
+    from
+    """
     print(pd.DataFrame({"TARGET_MEAN": dataframe.groupby(categorical_col)[target].mean()}), end="\n\n\n")
 
 
